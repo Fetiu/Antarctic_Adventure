@@ -57,8 +57,7 @@ void Game::makeHoles() {
 	//시간으로하면 그 시간을 실수로 지나칠경우 영원히 생성되지 않는 오류가 발생함..카운트로?
 
 	//시간이 아니라 랜덤거리로 구덩이를 생성시켜야!
-	srand(time(NULL));
-
+	
 	if (pit != nullptr) {	//hole이 만들어 졌었다면.
 		if (pit->getY() == 18) {	//바닥에 닿았는지 판단.
 			delete pit;	//delete시킨다고 nullptr이 되지는 않는다!
@@ -69,7 +68,7 @@ void Game::makeHoles() {
 	}
 	
 	if (distance == holeTime) {	//구덩이가 만들어져야하는 타이밍이라면 랜덤 위치에 지정.
-		pit = new Hole(2 * (rand() % 4 + 5));
+		pit = new Hole(16/*2 * (rand() % 4 + 5)*/);
 	}
 
 }
@@ -133,7 +132,7 @@ void Game::mapMenu() {
 	
 	wipeInfo();
 	loadScreen();
-	graphic.CircleFade(Ground::landscape[0]);
+	//graphic.CircleFade(Ground::landscape[0]);
 };
 
 void Game::wipeInfo() {
@@ -201,8 +200,8 @@ void Game::setTimer() {
 
 void Game::playStage() {
 	
-	start_time = (int)time(NULL);	//시작시간 저장.
-	
+	start_time = (unsigned int)time(NULL);	//시작시간 저장.
+	srand((unsigned int)time(NULL));
 	wipeInfo();
 
 	PlaySound(TEXT("Main_Bgm.wav"), NULL, SND_FILENAME | SND_ASYNC | SND_LOOP);
