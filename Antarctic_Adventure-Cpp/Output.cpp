@@ -169,11 +169,12 @@ void Output::drawScreen() {
 			gotoxy((i + 1) * 2, j + 1);
 			switch (board[j][i])
 			{
+			case -2: setColor(0x81); cout << "¢Ã"; break;
 			case -1: setColor(0x0A); cout << "  "; break;
 			case 0: setColor(0xBF); cout << "¢Æ"; break;//ÇÏ´Ã
 			case 1: case 2:setColor(0x10); cout << "¢Æ"; break;//Æë±Ï ¸öÃ¼
 			case 3:setColor(0x18); cout << "¢Æ"; break;//Æë±Ï °æ°è
-			case 4:setColor(0x90); cout << "¢Æ"; break;//±¸µ¢ÀÌ
+			case 4:setColor(0x10); cout << "  "; break;//±¸µ¢ÀÌ
 			case 5:setColor(0x8F); cout << "¢Æ"; break;//¾óÀ½ ¹Ý»ç
 			case 6:
 			case 7: setColor(0x9F); cout << "  "; break;//¹Ù´Ù

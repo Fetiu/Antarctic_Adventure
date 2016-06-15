@@ -38,6 +38,7 @@ int getKey() {
 		
 		switch (keyValue)
 		{
+		case SPACE:
 		case ENTER:
 			act = SELECT;
 			break;

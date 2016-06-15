@@ -28,7 +28,7 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Map.cpp" />
     <ClCompile Include="Output.cpp" />
-    <ClCompile Include="Score.cpp" />
+    <ClCompile Include="Save.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Character.h" />
@@ -40,8 +40,9 @@
     <ClInclude Include="Hole.h" />
     <ClInclude Include="Map.h" />
     <ClInclude Include="Output.h" />
-    <ClInclude Include="Score.h" />
+    <ClInclude Include="Save.h" />
     <ClInclude Include="Sound.h" />
+    <ClInclude Include="Station.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{9B283891-6CE3-4D78-A376-63D7014F9C91}</ProjectGuid>

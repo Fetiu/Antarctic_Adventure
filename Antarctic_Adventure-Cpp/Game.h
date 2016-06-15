@@ -22,7 +22,7 @@ public:
 	void startMenu();
 	void selectAvatar();
 	void mapMenu();
-	void setNextStage();
+	void setStageInfo();
 	void playStage();
 
 private:
@@ -34,18 +34,23 @@ private:
 	Ground *land;
 	Hole *pit;
 
+	void setTimer();
 	void update();
 	void moveCloser();
 	void wipeInfo();
-	void readyScreen();
+	void loadScreen();
+	void stageCompleted();
 	void printCurrentInfo();
 	void printMapInfo();
+	void createEntity();
+	void deleteEntity();
 	void makeHoles();
 
 	int destination;
 	int distance;
 	int rest;
-	int speed=30;
+	int speed;
+	int start_time;
 	int timer;
 	int score;
 };

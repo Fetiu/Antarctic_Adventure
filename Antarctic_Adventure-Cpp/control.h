@@ -19,6 +19,7 @@ using namespace std;
 #define DOWN 80 
 #define UP 72
 #define ENTER 13
+#define SPACE 32
 
 enum { MOVE_LEFT = 0, MOVE_RIGHT, IDLE, CROUCH,JUMP, STAGE_CLEAR, SELECT, GAME_QUIT };
 

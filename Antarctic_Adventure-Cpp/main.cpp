@@ -24,7 +24,7 @@ int main() {
 
 	while (game.action != GAME_QUIT) {
 
-		game.setNextStage();
+		game.setStageInfo();
 
 		game.mapMenu();
 
